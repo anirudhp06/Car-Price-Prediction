@@ -20,11 +20,20 @@ def main():
     option=st.selectbox('Fuel Type of your vehicle:',('Choose Fuel','Petrol','Diesel','CNG'))
     seller=st.selectbox('Seller Type:',('Choose Seller Type','Dealer','Indiviual'))
     Transmission=st.selectbox('Transmission Type of your vehicle:',('Choose Transmission','Manual','Automatic'))
-    if year<1950:
+    owner=st.selectbox('Owner Type:',('Choose Owner type','First','Second','Third','Fourth'))
+    if year<1975:
         st.write("Invalid:",int(year))
     else:
         st.write("Year of make is:",int(year))
-    st.write('You selected:',option)
+    st.write('Expected price of seller is:{}/-'.format(int(exp_price)))
+    st.write('Kilometers run:',kms)
+    st.write('Type of fuel:',option)
+    st.write('Type of seller:',seller)
+    st.write('Transmission type:',Transmission)
+    st.write('Type of Owner:',owner)
+    ls=[option,seller,Transmission,owner]
 
 if __name__=="__main__":
     main()
+
+# delhi 15 yrs
